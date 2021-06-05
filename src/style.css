@@ -1,0 +1,18 @@
+body {
+  padding-top: 30px;
+}
+
+h4 {
+  color: #5a7174;
+}
+
+.card.mb-3 {
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+.weather-icon {
+  display: block;
+  margin: 0 auto;
+  max-width: 65%;
+}

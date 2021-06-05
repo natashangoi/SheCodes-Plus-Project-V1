@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card card-body">
+        <form id="search-form">
+          <div class="row g-3">
+            <div class="col-7">
+              <input
+                type="text"
+                id="city-input"
+                placeholder="Enter City"
+                class="search-bar form-control"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                value="Search"
+                class="search-button form-control btn btn-primary"
+              />
+            </div>
+
+            <div class="col-3">
+              <button class="btn btn-success w-100" id="current-location">
+                Current City
+              </button>
+          </div>
+        </form>
+
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/clear night sky.png" alt="clear night" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h1 class="card-title" id="current-city-input"></h1>
+                <h2>
+                  <span id="date-input">
+                  </span>
+                  <br />
+                  <span id="description">
+                    Clear
+                  </span>
+                </h2>
+                <h3 class="fs-3">
+                  <span id="temperature"></span>
+                  <span class="units" id="temp-units">
+                    <a id="celsius-link">°C</a>
+                  </span>
+                </h3>
+                <h4 class="fs-4">
+                  Humidity: <span id="humidity"></span>
+                  %
+                  <br />
+                  Wind:
+                  <span id="wind-speed"> </span>km/h
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <p class="card-text text-center">Monday</p>
+            <img
+              src="img/Sunny Icon copy.png"
+              alt="sunny"
+              class="weather-icon"
+            />
+            <p class="card-text text-center">7°C/16°C</p>
+          </div>
+
+          <div class="col">
+            <p class="card-text text-center">
+              Tuesday>
+              <img src="img/cloudy.png" alt="cloudy" class="weather-icon" />
+            </p>
+
+            <p class="card-text text-center">8°C/18°C</p>
+          </div>
+
+          <div class="col">
+            <p class="card-text text-center">Wednesday</p>
+            <img
+              src="img/thunder storm.png"
+              alt="thunder storm"
+              class="weather-icon"
+            />
+            <p class="card-text text-center">9°C/19°C</p>
+          </div>
+
+          <div class="col">
+            <p class="card-text text-center">Thursday</p>
+            <img
+              src="img/Sunny Icon copy.png"
+              alt="sunny"
+              class="weather-icon"
+            />
+            <p class="card-text text-center">5°C/15°C</p>
+          </div>
+
+          <div class="col">
+            <p class="card-text text-center">Friday</p>
+            <img
+              src="img/partly cloudy.png"
+              alt="partly cloudy"
+              class="weather-icon"
+            />
+            <p class="card-text text-center">6°C/16°C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
